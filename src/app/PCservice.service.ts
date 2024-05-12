@@ -46,8 +46,8 @@ export class PCService
 
   private loadTasks(): Platform[] 
   {
-    const savedTasks = localStorage.getItem('tasks');
-    return savedTasks ? JSON.parse(savedTasks) : [];
+    const PCsavedTasks = localStorage.getItem('tasks');
+    return PCsavedTasks ? JSON.parse(PCsavedTasks) : [];
   }
 
   private updateTasks(): void 

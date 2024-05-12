@@ -46,8 +46,8 @@ export class XBoxService
 
   private loadTasks(): Platform[] 
   {
-    const savedTasks = localStorage.getItem('tasks');
-    return savedTasks ? JSON.parse(savedTasks) : [];
+    const XBoxsavedTasks = localStorage.getItem('tasks');
+    return XBoxsavedTasks ? JSON.parse(XBoxsavedTasks) : [];
   }
 
   private updateTasks(): void 

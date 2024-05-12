@@ -46,8 +46,8 @@ export class PlayStationService
 
   private loadTasks(): Platform[] 
   {
-    const savedTasks = localStorage.getItem('tasks');
-    return savedTasks ? JSON.parse(savedTasks) : [];
+    const PlayStationsavedTasks = localStorage.getItem('tasks');
+    return PlayStationsavedTasks ? JSON.parse(PlayStationsavedTasks) : [];
   }
 
   private updateTasks(): void 
