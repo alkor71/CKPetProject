@@ -1,0 +1,63 @@
+<div class="layout">
+<div class="form-container">
+  <form [formGroup]="PCForm" (ngSubmit)="onSubmit()">
+
+    <div class="form-row">
+      <label for="type">Название</label>
+      <input type="text" formControlName="name" id="name" required>
+    </div>
+
+    <div class="form-row">
+      <label for="priority">Издатель</label>
+      <input type="text" formControlName="publisher" id="publisher">
+    </div>
+
+    <div class="form-row">
+      <label for="status">Жанр</label>
+      <input type="text" formControlName="genre" id="genre" required>
+    </div>
+
+    <div class="form-row">
+      <label for="description">Цена (Руб)</label>
+      <input type="number" formControlName="price" id="price">
+    </div>
+
+    <div class="form-actions">
+      <button type="submit" class="submit-button">Добавить</button>
+    </div>
+
+  </form>
+</div>
+
+<div class="table-container">
+  <table class="table">
+
+    <thead>
+      <tr>
+        <th>Артикул</th>
+        <th>Название</th>
+        <th>Издатель</th>
+        <th>Жанр</th>
+        <th>Цена (Руб)</th>
+        <th>Управление</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let task of tasks">
+        <td>{{ task.id }}</td>
+        <td>{{ task.name }}</td>
+        <td>{{ task.publisher }}</td>
+        <td>{{ task.genre }}</td>
+        <td>{{ task.price }}</td>
+        <td>
+          <button (click)="onEdit(task)">Редактировать</button>
+          <button (click)="onDelete(task.id)">Удалить</button>
+        </td>
+
+      </tr>
+    </tbody>
+
+  </table>
+</div>
+</div>
